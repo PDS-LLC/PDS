@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proper Delivery Services | We Move Your Business Forward</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-black: #000000;
+            --secondary-black: #1a1a1a;
+            --accent-gold: #FFD700;
+            --accent-orange: #FF6B35;
+            --light-text: #FFFFFF;
+            --medium-text: #CCCCCC;
+            --card-dark: #222222;
+            --border-glow: rgba(255, 215, 0, 0.3);
+        }
+
+        body {
+            background-color: var(--primary-black);
+            color: var(--light-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-glow);
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-icon {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-orange));
+            color: var(--primary-black);
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 900;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            border: 2px solid var(--accent-gold);
+        }
+
+        .logo-text h1 {
+            font-size: 32px;
+            line-height: 1.2;
+            background: linear-gradient(to right, var(--accent-gold), var(--accent-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .tagline {
+            font-size: 15px;
+            letter-spacing: 1.5px;
+            color: var(--accent-gold);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            padding: 0.6rem 0;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to right, var(--accent-gold), var(--accent-orange));
+            transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .quote-btn {
+            background: linear-gradient(45deg, var(--accent-gold), var(--accent-orange));
+            color: var(--primary-black);
+            padding: 0.8rem 1.8rem;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-left: 1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .quote-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light-text);
+            font-size: 28px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .mobile-menu-btn:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                        url('imges/powerOnly2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 12rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.9) 100%);
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            background: linear-gradient(to right, var(--accent-gold), #FFFFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--medium-text);
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--accent-gold), var(--accent-orange));
+            color: var(--primary-black);
+            padding: 1.5rem 3.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            margin-top: 1rem;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.5);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 8rem 2rem;
+            background-color: var(--secondary-black);
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-title h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--light-text);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent-gold), var(--accent-orange));
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--medium-text);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, #222222, #1a1a1a);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            padding: 2.5rem;
+            height: 100%;
+            position: relative;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--accent-gold), var(--accent-orange));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: var(--accent-gold);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            color: var(--accent-gold);
+            font-size: 50px;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .service-content h3 {
+            color: var(--light-text);
+            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .service-content p {
+            color: var(--medium-text);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        /* About Section */
+        .about {
+            padding: 8rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 6rem;
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border-glow), transparent);
+        }
+
+        .about-content {
+            flex: 1;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .about-content h2 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            color: var(--light-text);
+            position: relative;
+            display: inline-block;
+        }
+
+        .about-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent-gold), var(--accent-orange));
+            border-radius: 2px;
+        }
+
+        .about-content p {
+            color: var(--medium-text);
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--border-glow);
+            animation: fadeInRight 1s ease-out;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Reviews Section */
+        .reviews {
+            padding: 8rem 2rem;
+            background-color: var(--secondary-black);
+            position: relative;
+        }
+
+        .reviews::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 4rem auto 0;
+        }
+
+        .review-card {
+            background: linear-gradient(145deg, #222222, #1a1a1a);
+            border-radius: 15px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--accent-gold), var(--accent-orange));
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.4s;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .review-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .review-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-orange));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary-black);
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .review-info h4 {
+            color: var(--light-text);
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .review-info p {
+            color: var(--accent-gold);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .review-stars {
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .review-text {
+            color: var(--medium-text);
+            font-style: italic;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            font-weight: 300;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .review-text::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            font-size: 3rem;
+            color: var(--accent-gold);
+            opacity: 0.5;
+            font-family: Georgia, serif;
+        }
+
+        /* Clients/Stats Section */
+        .clients {
+            padding: 8rem 2rem;
+            background-color: var(--primary-black);
+            position: relative;
+        }
+
+        .clients::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 4rem auto 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(145deg, #222222, #1a1a1a);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 2px solid rgba(255, 215, 0, 0.1);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--accent-gold), var(--accent-orange), var(--accent-gold));
+            z-index: -1;
+            border-radius: 22px;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: transparent;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .stat-icon {
+            font-size: 50px;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: var(--light-text);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-description {
+            color: var(--medium-text);
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            padding: 8rem 2rem;
+            background-color: var(--secondary-black);
+            position: relative;
+        }
+
+        .quote-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
+        }
+
+        .quote-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(145deg, #222222, #1a1a1a);
+            border-radius: 25px;
+            padding: 4rem;
+            border: 2px solid var(--border-glow);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.05), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite linear;
+        }
+
+        @keyframes shine {
+            0% { transform: rotate(45deg) translateX(-100%); }
+            100% { transform: rotate(45deg) translateX(100%); }
+        }
+
+        .quote-form h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--light-text);
+            text-align: center;
+            position: relative;
+        }
+
+        .quote-form p {
+            color: var(--medium-text);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            color: var(--light-text);
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 1.2rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            border-radius: 10px;
+            color: var(--light-text);
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            font-weight: 300;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(45deg, var(--accent-gold), var(--accent-orange));
+            color: var(--primary-black);
+            border: none;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.5);
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-black);
+            padding: 6rem 2rem 2rem;
+            border-top: 2px solid var(--border-glow);
+            position: relative;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-column h3 {
+            color: var(--accent-gold);
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent-gold), var(--accent-orange));
+            border-radius: 2px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-column a {
+            color: var(--medium-text);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 300;
+            font-size: 1.1rem;
+            display: inline-block;
+        }
+
+        .footer-column a:hover {
+            color: var(--accent-gold);
+            transform: translateX(5px);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: var(--medium-text);
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact-info i {
+            color: var(--accent-gold);
+            margin-top: 0.3rem;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 215, 0, 0.1);
+            border-radius: 12px;
+            color: var(--accent-gold);
+            transition: all 0.3s;
+            font-size: 1.3rem;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-black);
+            transform: translateY(-5px) rotate(5deg);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+            border-color: var(--accent-gold);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 6rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+            font-size: 1rem;
+            color: var(--medium-text);
+            font-weight: 300;
+        }
+
+        .copyright a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .copyright a:hover {
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .about {
+                flex-direction: column;
+                gap: 5rem;
+            }
+            
+            .hero h2 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header-container {
+                padding: 0 1.5rem;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.95);
+                padding: 6rem 2rem;
+                gap: 2.5rem;
+                z-index: 999;
+                overflow-y: auto;
+                backdrop-filter: blur(10px);
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1000;
+            }
+
+            .hero h2 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.3rem;
+            }
+
+            .section-title h2, .about-content h2, .quote-form h2 {
+                font-size: 2.8rem;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .services-grid, .reviews-grid, .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 10rem 1.5rem;
+                margin-top: 70px;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .services, .about, .reviews, .clients, .quote-section {
+                padding: 6rem 1.5rem;
+            }
+
+            .quote-container {
+                padding: 3rem;
+            }
+
+            .stat-number {
+                font-size: 3.5rem;
+            }
+
+            .logo-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+
+            .logo-text h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 8rem 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-button, .quote-btn, .submit-btn {
+                padding: 1.2rem 2.5rem;
+                font-size: 1.1rem;
+            }
+
+            .services-grid, .reviews-grid, .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .service-card, .review-card, .stat-card {
+                padding: 2rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .stat-number {
+                font-size: 3rem;
+            }
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--accent-gold), var(--accent-orange));
+            color: var(--primary-black);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+            border: none;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header with Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">PDS</div>
+                <div class="logo-text">
+                    <div class="tagline">We Move Your <br>Business Forward</div>
+                </div>
+            </div>
+            
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#clients">Clients & Stats</a></li>
+                    <li><a href="#quote" class="quote-btn">Get Quote</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Proper Delivery Services</h2>
+            <p>Proper Delivery Services provides reliable, secure, and efficient transportation solutions for businesses worldwide. With cutting-edge technology and 24/7 monitoring, we ensure your shipments arrive on time, every time.</p>
+            <a href="#quote" class="cta-button">Request a Quote</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Comprehensive logistics solutions tailored to meet your business needs</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Express Delivery</h3>
+                    <p>Guaranteed same-day and next-day delivery with real-time tracking and notifications for time-sensitive shipments.</p>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <div class="service-content">
+                    <h3>International Logistics</h3>
+                    <p>Global shipping solutions with customs clearance, multi-modal transport, and dedicated international specialists.</p>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-temperature-low"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Cold Chain Solutions</h3>
+                    <p>Temperature-controlled transport for pharmaceuticals, food, and sensitive materials with 24/7 monitoring.</p>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-warehouse"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Warehousing & Fulfillment</h3>
+                    <p>Secure storage facilities with inventory management, pick-and-pack services, and automated fulfillment.</p>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-truck-loading"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Freight Management</h3>
+                    <p>Full truckload (FTL), less than truckload (LTL), and specialized freight services with optimized routing.</p>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Secure Transport</h3>
+                    <p>High-value and confidential shipment handling with armed security, GPS tracking, and tamper-proof seals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>About Proper Delivery Services</h2>
+            <p>Founded in 1998, Proper Delivery Services has grown from a regional courier company to a global logistics leader. Our commitment to reliability, transparency, and customer satisfaction has earned us the trust of thousands of businesses worldwide.</p>
+            
+            <p>We leverage advanced technology like AI-powered route optimization, IoT-enabled tracking, and blockchain-based documentation to provide unparalleled visibility and control over your supply chain.</p>
+            
+            <p>Our team of over 2,500 logistics experts operates across 50+ countries, ensuring seamless cross-border transportation and compliance with international regulations.</p>
+            
+            <a href="#quote" class="cta-button" style="margin-top: 2rem;">Partner With Us</a>
+        </div>
+        
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="PDS Global Operations Center">
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="section-title">
+            <h2>Client Reviews</h2>
+            <p>What our customers say about working with Proper Delivery Services</p>
+        </div>
+        
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">JP</div>
+                    <div class="review-info">
+                        <h4>Jabara Pearson</h4>
+                        <p>Owner, Persons Quality Cargo, LLC</p>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">"PDS has transformed our supply chain. Their real-time tracking and 99.7% on-time delivery rate have significantly reduced our logistics costs. Highly recommended!"</p>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">CB</div>
+                    <div class="review-info">
+                        <h4>Chakir Baraat</h4>
+                        <p>Owner Operator, Shaq Trucking LLC</p>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="review-text">"The cold chain solution for our pharmaceutical products is exceptional. Temperature control is precise, and their documentation is flawless for compliance."</p>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">MD</div>
+                    <div class="review-info">
+                        <h4>Michael Dozier</h4>
+                        <p>Justnice Prod LLC</p>
+                    </div>
+                </div>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">"We've shipped over 5,000 freight loads with PDS in the last 3 years. Their reliability and communication are outstanding. A true logistics partner."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients/Stats Section -->
+    <section class="clients" id="clients">
+        <div class="section-title">
+            <h2>Our Reach & Impact</h2>
+            <p>Trusted by industry leaders across the globe</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Years Experience</div>
+                <p class="stat-description">Providing reliable transportation since 1998</p>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="stat-number">1,000+</div>
+                <div class="stat-label">Carriers</div>
+                <p class="stat-description">Certified carrier partners in our network</p>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <div class="stat-number">48</div>
+                <div class="stat-label">States Covered</div>
+                <p class="stat-description">Complete coverage across the US and territories</p>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <div class="stat-number">8,000+</div>
+                <div class="stat-label">Loads Delivered</div>
+                <p class="stat-description">Successful deliveries and counting</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section" id="quote">
+        <div class="quote-container">
+            <form class="quote-form">
+                <h2>Get a Free Quote</h2>
+                <p>Fill out the form below and our logistics experts will contact you within 24 hours</p>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service">Service Needed *</label>
+                        <select id="service" required>
+                            <option value="">Select a service</option>
+                            <option value="express">Express Delivery</option>
+                            <option value="international">International Logistics</option>
+                            <option value="cold-chain">Cold Chain Solutions</option>
+                            <option value="warehousing">Warehousing & Fulfillment</option>
+                            <option value="freight">Freight Management</option>
+                            <option value="secure">Secure Transport</option>
+                            <option value="custom">Custom Solution</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="shipment-type">Shipment Type</label>
+                        <select id="shipment-type">
+                            <option value="general">General Cargo</option>
+                            <option value="perishable">Perishable Goods</option>
+                            <option value="hazardous">Hazardous Materials</option>
+                            <option value="high-value">High-Value Items</option>
+                            <option value="oversized">Oversized Load</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="origin">Origin City *</label>
+                        <input type="text" id="origin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination City *</label>
+                        <input type="text" id="destination" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Shipment Description *</label>
+                    <textarea id="description" placeholder="Please describe your shipment including dimensions, weight, quantity, and any special requirements..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Request Quote</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="logo">
+                    <div class="logo-icon">PDS</div>
+                    <div class="logo-text">
+                        <h1>Proper Delivery Services</h1>
+                    </div>
+                </div>
+                <p style="color: var(--medium-text); margin-top: 1.5rem; font-weight: 300; font-size: 1.1rem;">We Move Your Business Forward</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#clients">Clients & Stats</a></li>
+                    <li><a href="#quote">Get Quote</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#services">Express Delivery</a></li>
+                    <li><a href="#services">International Logistics</a></li>
+                    <li><a href="#services">Cold Chain Solutions</a></li>
+                    <li><a href="#services">Warehousing</a></li>
+                    <li><a href="#services">Freight Management</a></li>
+                    <li><a href="#services">Secure Transport</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 375 86th ST,<br>Brooklyn NY 11209</li>
+                    <li><i class="fas fa-phone"></i> 1-800-PDS-SHIP (737-7447)</li>
+                    <li><i class="fas fa-envelope"></i> quotes@properdelivery.com</li>
+                    <li><i class="fas fa-clock"></i> 24/7 Customer Support</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Proper Delivery Services. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            const isOpen = navMenu.style.display === 'flex';
+            navMenu.style.display = isOpen ? 'none' : 'flex';
+            mobileMenuToggle.innerHTML = isOpen ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 992) {
+                    navMenu.style.display = 'none';
+                    mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+        
+        // Scroll to top button
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        document.querySelector('.quote-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your quote request! Our logistics team will contact you within 24 hours.');
+            this.reset();
+        });
+        
+        // Stats counter animation
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statCards = entry.target.querySelectorAll('.stat-card');
+                    statCards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0) scale(1)';
+                            
+                            // Animate numbers
+                            const statNumber = card.querySelector('.stat-number');
+                            if (statNumber) {
+                                const targetNumber = parseInt(statNumber.textContent);
+                                const suffix = statNumber.textContent.replace(/\d+/g, '');
+                                let currentNumber = 0;
+                                const increment = targetNumber / 50;
+                                const duration = 1500;
+                                const stepTime = duration / 50;
+                                
+                                const timer = setInterval(() => {
+                                    currentNumber += increment;
+                                    if (currentNumber >= targetNumber) {
+                                        clearInterval(timer);
+                                        statNumber.textContent = targetNumber + suffix;
+                                    } else {
+                                        statNumber.textContent = Math.floor(currentNumber) + suffix;
+                                    }
+                                }, stepTime);
+                            }
+                        }, index * 200);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        const clientsSection = document.getElementById('clients');
+        if (clientsSection) {
+            observer.observe(clientsSection);
+        }
+        
+        // Set initial opacity for stat cards
+        document.querySelectorAll('.stat-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px) scale(0.95)';
+        });
+    </script>
+</body>
+</html>
