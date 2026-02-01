@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proper Delivery Services</title>
-    <link rel="icon" type="png" href="imges/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -34,7 +34,7 @@
 
         /* Header & Navigation */
         header {
-            background-color: transparent;
+            background-color: black;
             backdrop-filter: blur(10px);
             padding: 1rem 0;
             position: fixed;
@@ -174,8 +174,8 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
-                        url('imges/powerOnly2.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('imges/powerOnly2.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -193,7 +193,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.9) 100%);
+            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
         }
 
         .hero-content {
@@ -209,6 +209,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -421,6 +422,7 @@
                 opacity: 0;
                 transform: translateX(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -468,6 +470,7 @@
                 opacity: 0;
                 transform: translateX(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -934,8 +937,13 @@
         }
 
         @keyframes shine {
-            0% { transform: rotate(45deg) translateX(-100%); }
-            100% { transform: rotate(45deg) translateX(100%); }
+            0% {
+                transform: rotate(45deg) translateX(-100%);
+            }
+
+            100% {
+                transform: rotate(45deg) translateX(100%);
+            }
         }
 
         .quote-form h2 {
@@ -977,7 +985,9 @@
             font-size: 1.1rem;
         }
 
-        input, select, textarea {
+        input,
+        select,
+        textarea {
             width: 100%;
             padding: 1.2rem;
             background-color: rgba(0, 0, 0, 0.5);
@@ -989,7 +999,9 @@
             font-weight: 300;
         }
 
-        input:focus, select:focus, textarea:focus {
+        input:focus,
+        select:focus,
+        textarea:focus {
             outline: none;
             border-color: var(--accent-gold);
             box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
@@ -1171,16 +1183,16 @@
                 flex-direction: column;
                 gap: 5rem;
             }
-            
+
             .hero h2 {
                 font-size: 3.5rem;
             }
-            
+
             .truck-card {
                 grid-template-columns: 1fr;
                 max-width: 600px;
             }
-            
+
             .truck-image {
                 height: 250px;
             }
@@ -1220,7 +1232,9 @@
                 font-size: 1.3rem;
             }
 
-            .section-title h2, .about-content h2, .quote-form h2 {
+            .section-title h2,
+            .about-content h2,
+            .quote-form h2 {
                 font-size: 2.8rem;
             }
 
@@ -1229,14 +1243,16 @@
                 gap: 1.5rem;
             }
 
-            .services-grid, .reviews-grid, .stats-grid {
+            .services-grid,
+            .reviews-grid,
+            .stats-grid {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
-            
+
             .truck-container {
                 height: 700px;
             }
-            
+
             .truck-specs {
                 grid-template-columns: 1fr;
             }
@@ -1256,7 +1272,12 @@
                 font-size: 1.2rem;
             }
 
-            .services, .about, .reviews, .clients, .trucks, .quote-section {
+            .services,
+            .about,
+            .reviews,
+            .clients,
+            .trucks,
+            .quote-section {
                 padding: 6rem 1.5rem;
             }
 
@@ -1277,15 +1298,15 @@
             .logo-text h1 {
                 font-size: 28px;
             }
-            
+
             .truck-container {
                 height: 600px;
             }
-            
+
             .truck-card {
                 padding: 2rem;
             }
-            
+
             .truck-details h3 {
                 font-size: 1.8rem;
             }
@@ -1304,17 +1325,23 @@
                 font-size: 1.1rem;
             }
 
-            .cta-button, .quote-btn, .submit-btn {
+            .cta-button,
+            .quote-btn,
+            .submit-btn {
                 padding: 1.2rem 2.5rem;
                 font-size: 1.1rem;
             }
 
-            .services-grid, .reviews-grid, .stats-grid {
+            .services-grid,
+            .reviews-grid,
+            .stats-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
 
-            .service-card, .review-card, .stat-card {
+            .service-card,
+            .review-card,
+            .stat-card {
                 padding: 2rem;
             }
 
@@ -1326,15 +1353,15 @@
             .stat-number {
                 font-size: 3rem;
             }
-            
+
             .truck-container {
                 height: 700px;
             }
-            
+
             .truck-slide {
                 padding: 1.5rem;
             }
-            
+
             .truck-card {
                 padding: 1.5rem;
             }
@@ -1376,6 +1403,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Scroll to Top Button -->
     <button class="scroll-top" id="scrollTop">
@@ -1391,7 +1419,7 @@
                     <div class="tagline">We Move Your <br>Business Forward</div>
                 </div>
             </div>
-            
+
             <nav>
                 <ul id="nav-menu">
                     <li><a href="#home">Home</a></li>
@@ -1413,7 +1441,9 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h2>Proper Delivery Services</h2>
-            <p>Proper Delivery Services provides reliable, secure, and efficient transportation solutions for businesses worldwide. With cutting-edge technology and 24/7 monitoring, we ensure your shipments arrive on time, every time.</p>
+            <p>Proper Delivery Services provides reliable, secure, and efficient transportation solutions for businesses
+                worldwide. With cutting-edge technology and 24/7 monitoring, we ensure your shipments arrive on time,
+                every time.</p>
             <a href="#quote" class="cta-button">Request a Quote</a>
         </div>
     </section>
@@ -1424,7 +1454,7 @@
             <h2>Our Services</h2>
             <p>Comprehensive logistics solutions tailored to meet your business needs</p>
         </div>
-        
+
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">
@@ -1432,57 +1462,63 @@
                 </div>
                 <div class="service-content">
                     <h3>Load Searching & Booking</h3>
-                    <p>We find suitable and high-paying loads from load boards and brokers according to truck availability. Our team ensures timely booking to keep trucks moving and profitable.</p>
+                    <p>We find suitable and high-paying loads from load boards and brokers according to truck
+                        availability. Our team ensures timely booking to keep trucks moving and profitable.</p>
                 </div>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-route"></i>
                 </div>
                 <div class="service-content">
                     <h3>Route Planning</h3>
-                    <p>We plan the most efficient and cost-effective routes for drivers. This helps reduce fuel costs, avoid delays, and ensure on-time delivery.</p>
+                    <p>We plan the most efficient and cost-effective routes for drivers. This helps reduce fuel costs,
+                        avoid delays, and ensure on-time delivery.</p>
                 </div>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-user-friends"></i>
                 </div>
                 <div class="service-content">
                     <h3>Driver Coordination</h3>
-                    <p>We stay in constant communication with drivers to provide load details, pickup and delivery instructions, and support during transit.</p>
+                    <p>We stay in constant communication with drivers to provide load details, pickup and delivery
+                        instructions, and support during transit.</p>
                 </div>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-file-alt"></i>
                 </div>
                 <div class="service-content">
                     <h3>Paperwork & Documentation</h3>
-                    <p>We handle all dispatch-related paperwork including rate confirmations, Bills of Lading (BOL), and other shipment documents to ensure smooth operations.</p>
+                    <p>We handle all dispatch-related paperwork including rate confirmations, Bills of Lading (BOL), and
+                        other shipment documents to ensure smooth operations.</p>
                 </div>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-map-marked-alt"></i>
                 </div>
                 <div class="service-content">
                     <h3>Tracking & Updates</h3>
-                    <p>We monitor truck locations in real-time and provide regular updates to brokers and customers for transparency and reliability.</p>
+                    <p>We monitor truck locations in real-time and provide regular updates to brokers and customers for
+                        transparency and reliability.</p>
                 </div>
             </div>
-            
+
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-headset"></i>
                 </div>
                 <div class="service-content">
                     <h3>Broker & Customer Communication</h3>
-                    <p>We manage negotiations, booking confirmations, and all communication with brokers and customers to maintain strong business relationships.</p>
+                    <p>We manage negotiations, booking confirmations, and all communication with brokers and customers
+                        to maintain strong business relationships.</p>
                 </div>
             </div>
         </div>
@@ -1492,17 +1528,22 @@
     <section class="about" id="about">
         <div class="about-content">
             <h2>About Proper Delivery Services</h2>
-            <p>Founded with a commitment to excellence in truck dispatching, our company has grown by providing reliable load management and driver support services. Our focus on transparency, efficiency, and customer satisfaction has helped us build strong relationships with drivers and brokers.</p>
-            
-            <p>We utilize modern dispatch technology, live tracking systems, and digital documentation to improve efficiency, enhance communication, and provide full visibility of truck movements.</p>
-            
-            <p>Our dedicated dispatch team works closely with drivers, brokers, and customers to ensure efficient load management, real-time tracking, and reliable transportation services.</p>
-            
+            <p>Founded with a commitment to excellence in truck dispatching, our company has grown by providing reliable
+                load management and driver support services. Our focus on transparency, efficiency, and customer
+                satisfaction has helped us build strong relationships with drivers and brokers.</p>
+
+            <p>We utilize modern dispatch technology, live tracking systems, and digital documentation to improve
+                efficiency, enhance communication, and provide full visibility of truck movements.</p>
+
+            <p>Our dedicated dispatch team works closely with drivers, brokers, and customers to ensure efficient load
+                management, real-time tracking, and reliable transportation services.</p>
+
             <a href="#quote" class="cta-button" style="margin-top: 2rem;">Partner With Us</a>
         </div>
-        
+
         <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="PDS Global Operations Center">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="PDS Global Operations Center">
         </div>
     </section>
 
@@ -1512,7 +1553,7 @@
             <h2>Client Reviews</h2>
             <p>What our customers say about working with Proper Delivery Services</p>
         </div>
-        
+
         <div class="reviews-grid">
             <div class="review-card">
                 <div class="review-header">
@@ -1529,9 +1570,10 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <p class="review-text">"PDS has transformed our supply chain. Their real-time tracking and 99.7% on-time delivery rate have significantly reduced our logistics costs. Highly recommended!"</p>
+                <p class="review-text">"PDS has transformed our supply chain. Their real-time tracking and 99.7% on-time
+                    delivery rate have significantly reduced our logistics costs. Highly recommended!"</p>
             </div>
-            
+
             <div class="review-card">
                 <div class="review-header">
                     <div class="review-avatar">CB</div>
@@ -1547,9 +1589,10 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <p class="review-text">"The cold chain solution for our pharmaceutical products is exceptional. Temperature control is precise, and their documentation is flawless for compliance."</p>
+                <p class="review-text">"The cold chain solution for our pharmaceutical products is exceptional.
+                    Temperature control is precise, and their documentation is flawless for compliance."</p>
             </div>
-            
+
             <div class="review-card">
                 <div class="review-header">
                     <div class="review-avatar">MD</div>
@@ -1565,7 +1608,8 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <p class="review-text">"We've shipped many freight loads with PDS in the short time. Their reliability and communication are outstanding. A true logistics partner."</p>
+                <p class="review-text">"We've shipped many freight loads with PDS in the short time. Their reliability
+                    and communication are outstanding. A true logistics partner."</p>
             </div>
         </div>
     </section>
@@ -1576,40 +1620,45 @@
             <h2>Our Reach & Impact</h2>
             <p>Trusted by industry leaders across the globe</p>
         </div>
-        
+
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-icon">
                     <i class="fas fa-calendar-alt"></i>
                 </div>
-                <div class="stat-number">10+</div>
+                <div class="stat-number">
+                    <span class="counter">10</span>+
+                </div>
+
                 <div class="stat-label">Years Experience</div>
                 <p class="stat-description">Providing reliable transportation since 1998</p>
             </div>
-            
+
             <div class="stat-card">
                 <div class="stat-icon">
                     <i class="fas fa-truck"></i>
                 </div>
-                <div class="stat-number">1,000+</div>
+                <div class="stat-number"><span class="counter">1000</span>+</div>
                 <div class="stat-label">Carriers</div>
                 <p class="stat-description">Certified carrier partners in our network</p>
             </div>
-            
+
             <div class="stat-card">
                 <div class="stat-icon">
                     <i class="fas fa-map-marked-alt"></i>
                 </div>
-                <div class="stat-number">48</div>
+                <div class="stat-number">
+                    <span class="counter">48</span>
+                </div>
                 <div class="stat-label">States Covered</div>
                 <p class="stat-description">Complete coverage across the US and territories</p>
             </div>
-            
+
             <div class="stat-card">
                 <div class="stat-icon">
                     <i class="fas fa-box-open"></i>
                 </div>
-                <div class="stat-number">8,000+</div>
+                <div class="stat-number"><span class="counter">8000</span>+</div>
                 <div class="stat-label">Loads Delivered</div>
                 <p class="stat-description">Successful deliveries and counting</p>
             </div>
@@ -1622,7 +1671,7 @@
             <h2>Our Truck Fleet</h2>
             <p>Explore our modern, well-maintained fleet of delivery vehicles</p>
         </div>
-        
+
         <div class="truck-container">
             <div class="truck-slider" id="truckSlider">
                 <!-- Truck 1 -->
@@ -1634,7 +1683,8 @@
                         </div>
                         <div class="truck-details">
                             <h3>Power Only</h3>
-                            <p>Our flagship long-haul truck with advanced safety features and fuel efficiency technology.</p>
+                            <p>Our flagship long-haul truck with advanced safety features and fuel efficiency
+                                technology.</p>
                             <div class="truck-specs">
                                 <div class="spec-item">
                                     <div class="spec-icon">
@@ -1676,7 +1726,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Truck 2 -->
                 <div class="truck-slide">
                     <div class="truck-card">
@@ -1728,7 +1778,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Truck 3 -->
                 <div class="truck-slide">
                     <div class="truck-card">
@@ -1780,7 +1830,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Truck 4 -->
                 <div class="truck-slide">
                     <div class="truck-card">
@@ -1832,7 +1882,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Truck 5 -->
                 <div class="truck-slide">
                     <div class="truck-card">
@@ -1884,7 +1934,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Truck 6 -->
                 <div class="truck-slide">
                     <div class="truck-card">
@@ -1936,7 +1986,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Truck 7 -->
                 <div class="truck-slide">
                     <div class="truck-card">
@@ -1988,7 +2038,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Truck 8 -->
                 <div class="truck-slide">
                     <div class="truck-card">
@@ -2040,7 +2090,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Truck 9 -->
                 <div class="truck-slide">
                     <div class="truck-card">
@@ -2092,7 +2142,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Truck 10 -->
                 <div class="truck-slide">
                     <div class="truck-card">
@@ -2146,7 +2196,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="truck-controls">
             <button class="truck-btn" id="prevTruck">
                 <i class="fas fa-chevron-left"></i>
@@ -2155,7 +2205,7 @@
                 <i class="fas fa-chevron-right"></i>
             </button>
         </div>
-        
+
         <div class="truck-dots" id="truckDots">
             <!-- Dots will be generated by JavaScript -->
         </div>
@@ -2167,7 +2217,7 @@
             <form class="quote-form">
                 <h2>Get a Free Quote</h2>
                 <p>Fill out the form below and our logistics experts will contact you within 24 hours</p>
-                
+
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Full Name *</label>
@@ -2178,7 +2228,7 @@
                         <input type="text" id="company">
                     </div>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email">Email Address *</label>
@@ -2189,7 +2239,7 @@
                         <input type="tel" id="phone" required>
                     </div>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-group">
                         <label for="service">Service Needed *</label>
@@ -2215,7 +2265,7 @@
                         </select>
                     </div>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-group">
                         <label for="origin">Origin City *</label>
@@ -2226,12 +2276,14 @@
                         <input type="text" id="destination" required>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="description">Shipment Description *</label>
-                    <textarea id="description" placeholder="Please describe your shipment including dimensions, weight, quantity, and any special requirements..." required></textarea>
+                    <textarea id="description"
+                        placeholder="Please describe your shipment including dimensions, weight, quantity, and any special requirements..."
+                        required></textarea>
                 </div>
-                
+
                 <button type="submit" class="submit-btn">Request Quote</button>
             </form>
         </div>
@@ -2247,7 +2299,8 @@
                         <h1>Proper Delivery Services</h1>
                     </div>
                 </div>
-                <p style="color: var(--medium-text); margin-top: 1.5rem; font-weight: 300; font-size: 1.1rem;">We Move Your Business Forward</p>
+                <p style="color: var(--medium-text); margin-top: 1.5rem; font-weight: 300; font-size: 1.1rem;">We Move
+                    Your Business Forward</p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -2255,7 +2308,7 @@
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
@@ -2268,7 +2321,7 @@
                     <li><a href="#quote">Get Quote</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Our Services</h3>
                 <ul>
@@ -2280,7 +2333,7 @@
                     <li><a href="#services">Broker & Customer Communication</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Contact Us</h3>
                 <ul class="contact-info">
@@ -2291,9 +2344,10 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="copyright">
-            <p>&copy; 2026 Proper Delivery Services. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p>&copy; 2026 Proper Delivery Services. All rights reserved. | <a href="#">Privacy Policy</a> | <a
+                    href="#">Terms of Service</a></p>
         </div>
     </footer>
 
@@ -2302,13 +2356,13 @@
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
         const navMenu = document.getElementById('nav-menu');
         const scrollTopBtn = document.getElementById('scrollTop');
-        
+
         mobileMenuToggle.addEventListener('click', () => {
             const isOpen = navMenu.style.display === 'flex';
             navMenu.style.display = isOpen ? 'none' : 'flex';
             mobileMenuToggle.innerHTML = isOpen ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
         });
-        
+
         // Close mobile menu when clicking on a link
         document.querySelectorAll('#nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
@@ -2318,7 +2372,7 @@
                 }
             });
         });
-        
+
         // Scroll to top button
         window.addEventListener('scroll', () => {
             if (window.scrollY > 500) {
@@ -2327,24 +2381,24 @@
                 scrollTopBtn.classList.remove('show');
             }
         });
-        
+
         scrollTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
+                if (targetId === '#') return;
+
                 const targetElement = document.querySelector(targetId);
-                if(targetElement) {
+                if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
@@ -2352,20 +2406,20 @@
                 }
             });
         });
-        
+
         // Form submission
-        document.querySelector('.quote-form').addEventListener('submit', function(e) {
+        document.querySelector('.quote-form').addEventListener('submit', function (e) {
             e.preventDefault();
             alert('Thank you for your quote request! Our logistics team will contact you within 24 hours.');
             this.reset();
         });
-        
+
         // Stats counter animation - FIXED VERSION
         const observerOptions = {
             threshold: 0.5,
             rootMargin: '0px 0px -100px 0px'
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -2374,34 +2428,34 @@
                         setTimeout(() => {
                             card.style.opacity = '1';
                             card.style.transform = 'translateY(0) scale(1)';
-                            
+
                             // Animate numbers
                             const statNumber = card.querySelector('.stat-number');
                             if (statNumber) {
                                 // Get the original text
                                 const originalText = statNumber.textContent;
-                                
+
                                 // Extract the number (remove non-numeric characters except commas)
                                 let numberText = originalText.replace(/[^0-9,]/g, '');
-                                
+
                                 // Remove commas and convert to number
                                 const targetNumber = parseInt(numberText.replace(/,/g, '')) || 0;
-                                
+
                                 // Extract suffix (like "+" sign)
                                 const suffix = originalText.replace(/[0-9,]/g, '');
-                                
+
                                 // Start animation
                                 let currentNumber = 0;
                                 const duration = 2000; // 2 seconds
                                 const steps = 100;
                                 const increment = targetNumber / steps;
                                 const stepTime = duration / steps;
-                                
+
                                 // Format number with commas
                                 const formatNumber = (num) => {
                                     return num.toLocaleString('en-US');
                                 };
-                                
+
                                 const timer = setInterval(() => {
                                     currentNumber += increment;
                                     if (currentNumber >= targetNumber) {
@@ -2418,27 +2472,27 @@
                 }
             });
         }, observerOptions);
-        
+
         const clientsSection = document.getElementById('clients');
         if (clientsSection) {
             observer.observe(clientsSection);
         }
-        
+
         // Set initial opacity for stat cards
         document.querySelectorAll('.stat-card').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px) scale(0.95)';
         });
-        
+
         // Truck Slider Functionality
         const truckSlider = document.getElementById('truckSlider');
         const prevTruckBtn = document.getElementById('prevTruck');
         const nextTruckBtn = document.getElementById('nextTruck');
         const truckDotsContainer = document.getElementById('truckDots');
-        
+
         let currentTruckIndex = 0;
         const totalTrucks = 10;
-        
+
         // Create dots for each truck
         for (let i = 0; i < totalTrucks; i++) {
             const dot = document.createElement('div');
@@ -2449,12 +2503,12 @@
             });
             truckDotsContainer.appendChild(dot);
         }
-        
+
         function goToTruck(index) {
             currentTruckIndex = index;
             const translateX = -currentTruckIndex * 10; // 10% per slide (100% / 10 trucks)
             truckSlider.style.transform = `translateX(${translateX}%)`;
-            
+
             // Update active dot
             document.querySelectorAll('.truck-dot').forEach((dot, i) => {
                 if (i === currentTruckIndex) {
@@ -2464,34 +2518,34 @@
                 }
             });
         }
-        
+
         function nextTruck() {
             currentTruckIndex = (currentTruckIndex + 1) % totalTrucks;
             goToTruck(currentTruckIndex);
         }
-        
+
         function prevTruck() {
             currentTruckIndex = (currentTruckIndex - 1 + totalTrucks) % totalTrucks;
             goToTruck(currentTruckIndex);
         }
-        
+
         // Add event listeners
         prevTruckBtn.addEventListener('click', prevTruck);
         nextTruckBtn.addEventListener('click', nextTruck);
-        
+
         // Auto-advance every 5 seconds
         let autoSlideInterval = setInterval(nextTruck, 5000);
-        
+
         // Pause auto-slide on hover
         truckSlider.addEventListener('mouseenter', () => {
             clearInterval(autoSlideInterval);
         });
-        
+
         truckSlider.addEventListener('mouseleave', () => {
             clearInterval(autoSlideInterval);
             autoSlideInterval = setInterval(nextTruck, 5000);
         });
-        
+
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') {
@@ -2501,6 +2555,21 @@
             }
         });
     </script>
-</body>
-</html>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+<script>
+    $('.stat-number').counterUp({
+        delay: 10,
+        time: 1500
+    });
+</script>
+
+
+</body>
+
+</html>
