@@ -611,95 +611,58 @@
 
         /* Clients/Stats Section */
         .clients {
-            padding: 8rem 2rem;
-            background-color: var(--primary-black);
-            position: relative;
-        }
+    padding: 80px 20px;
+    background: #000;
+    color: white;
+    text-align: center;
+}
 
-        .clients::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
-        }
+.section-title h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-            max-width: 1400px;
-            margin: 4rem auto 0;
-        }
+.section-title p {
+    color: #ccc;
+}
 
-        .stat-card {
-            background: linear-gradient(145deg, #222222, #1a1a1a);
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            text-align: center;
-            border: 2px solid rgba(255, 215, 0, 0.1);
-            transition: all 0.4s;
-            position: relative;
-            overflow: hidden;
-        }
+.stats-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
 
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, var(--accent-gold), var(--accent-orange), var(--accent-gold));
-            z-index: -1;
-            border-radius: 22px;
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
+.stat-card {
+    background: #111;
+    padding: 35px;
+    border-radius: 15px;
+    transition: 0.4s;
+    border: 1px solid #222;
+}
 
-        .stat-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            border-color: transparent;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-        }
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #ffc10755;
+}
 
-        .stat-card:hover::before {
-            opacity: 1;
-        }
+.stat-icon {
+    font-size: 40px;
+    color: #ffc107;
+    margin-bottom: 15px;
+}
 
-        .stat-icon {
-            font-size: 50px;
-            color: var(--accent-gold);
-            margin-bottom: 1.5rem;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-        }
+.stat-number {
+    font-size: 38px;
+    font-weight: bold;
+    color: #ffc107;
+}
 
-        .stat-number {
-            font-size: 4rem;
-            font-weight: 900;
-            color: var(--accent-gold);
-            margin-bottom: 0.5rem;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-            line-height: 1;
-        }
+.stat-label {
+    margin-top: 10px;
+    font-size: 18px;
+}
 
-        .stat-label {
-            color: var(--light-text);
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .stat-description {
-            color: var(--medium-text);
-            margin-top: 0.5rem;
-            font-size: 1rem;
-            font-weight: 300;
-        }
 
         /* Truck Fleet Section */
         .trucks {
@@ -1616,54 +1579,48 @@
 
     <!-- Clients/Stats Section -->
     <section class="clients" id="clients">
-        <div class="section-title">
-            <h2>Our Reach & Impact</h2>
-            <p>Trusted by industry leaders across the globe</p>
+    <div class="section-title">
+        <h2>Our Reach & Impact</h2>
+        <p>Trusted by industry leaders across the globe</p>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <i class="fas fa-calendar-alt stat-icon"></i>
+            <div class="stat-number">
+                <span class="counter" data-year="2015">0</span>+
+            </div>
+            <div class="stat-label">Years Experience</div>
         </div>
 
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
-                <div class="stat-number">
-                    <span class="counter">10</span>+
-                </div>
-
-                <div class="stat-label">Years Experience</div>
-                <p class="stat-description">Providing reliable transportation since 1998</p>
+        <div class="stat-card">
+            <i class="fas fa-truck stat-icon"></i>
+            <div class="stat-number">
+                <span class="counter" data-target="1000">0</span>+
             </div>
-
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-truck"></i>
-                </div>
-                <div class="stat-number"><span class="counter">1000</span>+</div>
-                <div class="stat-label">Carriers</div>
-                <p class="stat-description">Certified carrier partners in our network</p>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-map-marked-alt"></i>
-                </div>
-                <div class="stat-number">
-                    <span class="counter">48</span>
-                </div>
-                <div class="stat-label">States Covered</div>
-                <p class="stat-description">Complete coverage across the US and territories</p>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-icon">
-                    <i class="fas fa-box-open"></i>
-                </div>
-                <div class="stat-number"><span class="counter">8000</span>+</div>
-                <div class="stat-label">Loads Delivered</div>
-                <p class="stat-description">Successful deliveries and counting</p>
-            </div>
+            <div class="stat-label">Carriers</div>
         </div>
-    </section>
+
+        <div class="stat-card">
+            <i class="fas fa-map-marked-alt stat-icon"></i>
+            <div class="stat-number">
+                <span class="counter" data-target="48">0</span>
+            </div>
+            <div class="stat-label">States Covered</div>
+        </div>
+
+        <div class="stat-card">
+            <i class="fas fa-box-open stat-icon"></i>
+            <div class="stat-number">
+                <span class="counter" data-target="8000">0</span>+
+            </div>
+            <div class="stat-label">Loads Delivered</div>
+        </div>
+
+    </div>
+</section>
+
 
     <!-- Truck Fleet Section -->
     <section class="trucks" id="trucks">
@@ -2415,63 +2372,64 @@
         });
 
         // Stats counter animation - FIXED VERSION
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
-        };
+        const counters = document.querySelectorAll(".counter");
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const statCards = entry.target.querySelectorAll('.stat-card');
-                    statCards.forEach((card, index) => {
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'translateY(0) scale(1)';
+const easeOut = (t) => 1 - Math.pow(1 - t, 3);
 
-                            // Animate numbers
-                            const statNumber = card.querySelector('.stat-number');
-                            if (statNumber) {
-                                // Get the original text
-                                const originalText = statNumber.textContent;
+const animateCounter = (counter) => {
 
-                                // Extract the number (remove non-numeric characters except commas)
-                                let numberText = originalText.replace(/[^0-9,]/g, '');
+    let target;
 
-                                // Remove commas and convert to number
-                                const targetNumber = parseInt(numberText.replace(/,/g, '')) || 0;
+    // Experience auto calculate
+    if (counter.dataset.year) {
+        target = new Date().getFullYear() - counter.dataset.year;
+    } else {
+        target = parseInt(counter.dataset.target);
+    }
 
-                                // Extract suffix (like "+" sign)
-                                const suffix = originalText.replace(/[0-9,]/g, '');
+    let start = 0;
+    const duration = 2000;
+    const startTime = performance.now();
 
-                                // Start animation
-                                let currentNumber = 0;
-                                const duration = 2000; // 2 seconds
-                                const steps = 100;
-                                const increment = targetNumber / steps;
-                                const stepTime = duration / steps;
+    const update = (currentTime) => {
 
-                                // Format number with commas
-                                const formatNumber = (num) => {
-                                    return num.toLocaleString('en-US');
-                                };
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
 
-                                const timer = setInterval(() => {
-                                    currentNumber += increment;
-                                    if (currentNumber >= targetNumber) {
-                                        clearInterval(timer);
-                                        statNumber.textContent = formatNumber(targetNumber) + suffix;
-                                    } else {
-                                        statNumber.textContent = formatNumber(Math.floor(currentNumber)) + suffix;
-                                    }
-                                }, stepTime);
-                            }
-                        }, index * 200); // Stagger the animations
-                    });
-                    observer.unobserve(entry.target);
-                }
+        const easedProgress = easeOut(progress);
+        const value = Math.floor(easedProgress * target);
+
+        counter.textContent = value.toLocaleString();
+
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        }
+    };
+
+    requestAnimationFrame(update);
+};
+
+
+// Scroll Observer
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.querySelectorAll(".counter").forEach(counter => {
+                animateCounter(counter);
             });
-        }, observerOptions);
+
+            observer.unobserve(entry.target);
+        }
+
+    });
+
+}, { threshold: 0.4 });
+
+observer.observe(document.querySelector(".clients"));
+
 
         const clientsSection = document.getElementById('clients');
         if (clientsSection) {
